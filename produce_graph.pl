@@ -89,6 +89,12 @@ sub search_for_vars{
       if($expression =~ /\b$variable\b/){ # do a word search of the variable
         #print ",captured var:$variable ";
 	    push(@var_list, $variable);
+        next;
+      }
+      
+      # special, support pure numerical values on the right side
+      if($expression =~ /(\d+)\s*;/){
+        push(@var_list, $1);
       }
     }
 
