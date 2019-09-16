@@ -1,4 +1,4 @@
-#!/opt/local/bin/perl
+#!/usr/bin/env perl
 use strict;
 use Log::Log4perl qw(:easy);
 Log::Log4perl->easy_init($ERROR);
